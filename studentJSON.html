@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Student DataBase</h2>
+<p id="demo"></p>
+
+<script>
+let text = '{"student":[' +
+'{"ID":"001","Name":"Doe S","Course":"BCA" },' +
+'{"ID":"002","Name":"Subhajit","Course":"MCA"},' +
+'{"ID":"003","Name":"Jit","Course":"BBA" }]}';
+
+const obj = JSON.parse(text);
+
+
+let text1 = "";
+for (let i = 0; i < obj.student.length; i++) {
+  text1 += "Student ID : "+ obj.student[i].ID + ", Name: "+obj.student[i].Name+", Course: "+obj.student[i].Course;
+}
+document.getElementById("demo").innerHTML = text1;
+
+
+</script>
+
+</body>
+</html>
